@@ -1,0 +1,22 @@
+h2 {
+  color: green;
+}
+
+h1 {
+  color: red;
+}
+
+p {
+  font-weight: 700;
+}
+
+nav ul {
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
