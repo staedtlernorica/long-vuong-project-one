@@ -1,22 +1,25 @@
-h2 {
-  color: green;
-}
-
 h1 {
-  color: red;
+  font-family: "Roboto", sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: #2c2c2c;
+  letter-spacing: 0;
+  font-family: "Lora", serif;
+  line-height: 92px;
 }
 
-p {
-  font-weight: 700;
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 42px;
+  font-weight: bold;
+  color: #2c2c2c;
+  letter-spacing: 1;
 }
 
-nav ul {
-  text-align: center;
-}
-nav ul li {
-  display: inline-block;
-}
-nav ul li a {
-  text-decoration: none;
-  color: black;
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 42px;
+  font-weight: bold;
+  color: #2c2c2c;
+  letter-spacing: 1;
 }

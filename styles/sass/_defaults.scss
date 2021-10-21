@@ -1,0 +1,43 @@
+// font-family: 'Lora', serif;
+// font-family: 'Roboto', sans-serif;
+
+// NEVER NEST MORE THAN FOUR DEEP
+
+$black: #2c2c2c;
+$dark-grey-blue: #285e64;
+$orangey-yellow: #f6a823;
+$grey: #4f4f4f;
+$accent: #05afc1;
+$rusty: #a82706;
+$white-shade: #f0efed;
+
+
+@mixin fontSetup($sizeValue, $letterSpacing) {
+    font-family: 'Roboto', sans-serif;
+    font-size: $sizeValue;
+    font-weight: bold;
+    color: $black;
+    letter-spacing: $letterSpacing;
+  }
+
+  // BLOG, GET IN TOUCH
+h1{
+  @include fontSetup(80px, 0);
+  font-family: 'Lora', serif;
+  line-height: 92px;
+}
+
+// WHO IS SOPHIE, SOPHIE JOURNEY
+h2{
+  @include fontSetup(42px, 1);
+
+}
+
+// SOPHIE FAVOURITE THINGS, PHOTOS, WHY
+h3{
+  @include fontSetup(42px, 1);
+}
+
+h4{
+  
+}
