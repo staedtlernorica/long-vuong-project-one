@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-family: "Roboto", sans-serif;
   font-size: 80px;
@@ -18,8 +23,282 @@ h2 {
 
 h3 {
   font-family: "Roboto", sans-serif;
-  font-size: 42px;
+  font-size: 32px;
   font-weight: bold;
   color: #2c2c2c;
   letter-spacing: 1;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  color: #2c2c2c;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 29px;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c2c2c;
+  letter-spacing: 0;
+  font-weight: normal;
+  line-height: 32px;
+}
+
+.capitalized {
+  text-transform: uppercase;
+}
+
+body {
+  background: #f0efed;
+  height: 100vh;
+}
+
+header {
+  background: yellow;
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  height: 60px;
+  background-color: #f6a823;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.navbar {
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.navbar li {
+  display: inline;
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.navbar a {
+  color: #2c2c2c;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 29px;
+  letter-spacing: 1px;
+}
+.navbar .on-page {
+  color: #f0efed;
+}
+.navbar .hidden {
+  font-family: "Lora", serif;
+  color: #2c2c2c;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button {
+  background-color: #05afc1;
+  color: #2c2c2c;
+  padding: 5px 0;
+  border: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+footer {
+  background: #2c2c2c;
+  text-align: center;
+  width: 100%;
+}
+footer p {
+  color: #f0efed;
+}
+
+body.contact-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body.contact-page header {
+  background-image: url("../assets/contact-image-1.jpg");
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px;
+}
+body.contact-page header h1 {
+  margin: -50px 0;
+}
+body.contact-page section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body.contact-page main aside {
+  background-color: white;
+  padding: 25px;
+  color: #f6a823;
+  min-height: 230px;
+  min-width: 280px;
+  width: 25%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body.contact-page main .social-icons {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+body.contact-page main .social-icons li {
+  margin: 0 20px 0 0;
+}
+body.contact-page main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  margin-left: 30px;
+}
+body.contact-page main form .name-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body.contact-page main form input {
+  border: 0;
+  width: 44%;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+body.contact-page main form input:nth-child(2) {
+  margin-left: 20px;
+}
+body.contact-page main form textarea, body.contact-page main form button {
+  border: 0;
+  resize: none;
+  margin-bottom: 20px;
+}
+body.contact-page main form textarea {
+  height: 20vh;
+  padding: 15px;
+}
+
+body.blog-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #f0efed;
+}
+body.blog-page header {
+  background-image: url("../assets/blog-image-1.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px;
+}
+body.blog-page header h1 {
+  margin: -50px 0;
+}
+body.blog-page aside .about, body.blog-page aside .recent, body.blog-page article, body.blog-page .comment {
+  background: white;
+  padding: 50px;
+}
+body.blog-page .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+}
+body.blog-page ul {
+  list-style: circle;
 }

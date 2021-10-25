@@ -1,4 +1,243 @@
 @import '_defaults';
 
 
-@import '_header';
+
+
+// reuse header portion
+
+// reuse message-submit/comment-post comment portion
+
+
+//reuse header
+
+// reuse button
+
+
+// =====================COMMON ELEMENTS================
+.capitalized{
+    text-transform: uppercase;
+}
+
+body{
+    background: $white-shade;
+    height: 100vh;
+}
+
+header{
+    background: yellow;
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav{
+    height: 60px;
+    background-color: $orangey-yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.wrapper {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+
+
+
+// for top navigation bar
+.navbar{
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+
+    li{
+        display: inline;
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    a{
+        color: $black;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 29px;
+        letter-spacing: 1px;
+    }
+
+    .on-page{
+        color: $white-shade;
+    }
+
+    .hidden{
+        font-family: 'Lora', serif;
+        color: $black;
+        font-size: 32px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+
+button{
+    background-color: $accent;
+    color: $black;
+    padding: 5px 0;
+    border: 0;
+
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+footer{
+    background: $black;
+    text-align: center;
+    width: 100%;
+
+    p{
+        color: $white-shade;
+    }
+}
+
+// ======================CONTACT.HTML==========================
+body.contact-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    header{
+        background-image: url('../assets/contact-image-1.jpg');
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 100px;
+
+        h1{
+            margin: -50px 0;
+        }
+    }
+
+    section{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main{
+
+        aside{
+            background-color: white;
+            padding: 25px;
+            color: $orangey-yellow;
+            min-height: 230px;
+            min-width: 280px;
+            width: 25%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        
+        .social-icons {
+            justify-content: flex-start;
+
+            li{
+            margin: 0 20px 0 0;
+            }
+            
+        }   
+
+        form{            
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin-left: 30px;
+
+            .name-email{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            input{
+                border: 0;
+                width: 44%;
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+
+            input:nth-child(2){
+                margin-left: 20px;
+            }
+
+            textarea, button{
+                border: 0;
+                resize: none;
+                margin-bottom: 20px;
+            }
+
+            textarea{
+                height: 20vh;
+                padding: 15px;
+            }
+        }
+    }
+}
+
+
+// ====================BLOG.HTML============================
+
+body.blog-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $white-shade;
+
+    header{
+        background-image: url('../assets/blog-image-1.jpg');
+        background-position: center center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 100px;
+       
+        h1{
+            margin: -50px 0;
+        }
+    }
+
+    aside .about, aside .recent, article, .comment{
+        background: white;
+        padding: 50px;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        column-gap: 25px;
+    }
+
+    ul{
+        list-style: circle;
+        // list
+        li{
+            
+        }
+    }
+}
