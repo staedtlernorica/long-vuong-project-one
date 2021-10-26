@@ -58,10 +58,26 @@ body {
 }
 
 header {
-  background: yellow;
-  height: 50vh;
+  height: 45vh;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url("../assets/blog-image-1.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px;
+}
+header h1 {
+  margin: -50px 0;
 }
 
 nav {
@@ -144,6 +160,16 @@ button {
   text-transform: uppercase;
 }
 
+footer {
+  background: #2c2c2c;
+  text-align: center;
+  width: 100%;
+  padding: 5px 0;
+}
+footer p {
+  color: #f0efed;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,8 +178,6 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 70%;
-  margin-left: 30px;
 }
 form .name-email {
   display: -webkit-box;
@@ -165,7 +189,7 @@ form .name-email {
 }
 form input {
   border: 0;
-  width: 44%;
+  width: 47%;
   padding: 15px;
   margin-bottom: 20px;
 }
@@ -181,17 +205,6 @@ form textarea {
   height: 20vh;
   padding: 15px;
 }
-
-footer {
-  background: #2c2c2c;
-  text-align: center;
-  width: 100%;
-  padding: 5px 0;
-}
-footer p {
-  color: #f0efed;
-}
-
 .contact-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,21 +219,6 @@ footer p {
 }
 .contact-page header {
   background-image: url("../assets/contact-image-1.jpg");
-  background-position: center center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 100px;
-}
-.contact-page h1 {
-  margin: -50px 0;
 }
 .contact-page section {
   display: -webkit-box;
@@ -259,6 +257,12 @@ footer p {
   list-style-type: none;
   margin: 0 20px 0 0;
 }
+.contact-page .email-contact {
+  margin-left: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 
 .blog-page {
   display: -webkit-box;
@@ -271,30 +275,15 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #f0efed;
 }
 .blog-page header {
   background-image: url("../assets/blog-image-1.jpg");
-  background-position: center center;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 100px;
 }
-.blog-page h1 {
-  margin: -50px 0;
-}
-.blog-page aside .about, .blog-page aside .recent, .blog-page article, .blog-page .comment {
+.blog-page aside > *,
+.blog-page article,
+.blog-page .comment {
   background: white;
-  padding: 30px;
+  padding: 25px;
 }
 .blog-page aside div {
   margin-bottom: 30px;
@@ -311,13 +300,11 @@ footer p {
           column-gap: 25px;
 }
 .blog-page ul {
-  list-style: disc;
   list-style-position: inside;
 }
 .blog-page ul li {
   font-size: 20px;
   font-family: "Roboto", sans-serif;
-  color: #2c2c2c;
   line-height: 32px;
   letter-spacing: 0px;
 }
@@ -343,4 +330,37 @@ footer p {
 }
 .blog-page .add-comment {
   margin-bottom: 60px;
+}
+
+.home-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.home-page header {
+  background-image: none;
+  background-color: #f6a823;
+  height: 70vh;
+}
+.home-page header h1 {
+  font-size: 150px;
+}
+.home-page .sophie-stylized-image {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  -webkit-column-gap: 1fr;
+     -moz-column-gap: 1fr;
+          column-gap: 1fr;
+}
+.home-page img[src="assets/home-image-1.jpg"] {
+  -webkit-box-shadow: 20px 20px white;
+          box-shadow: 20px 20px white;
 }

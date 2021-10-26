@@ -3,10 +3,13 @@
 
 
 
+
+
+
+
 // reuse header portion
 
 // reuse message-submit/comment-post comment portion
-
 
 //reuse header
 
@@ -24,10 +27,20 @@ body{
 }
 
 header{
-    background: yellow;
-    height: 50vh;
+    height: 45vh;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url('../assets/blog-image-1.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 100px;   
+
+    h1{
+        margin: -50px 0;
+    }
 }
 
 nav{
@@ -38,15 +51,11 @@ nav{
     justify-content: center;
 }
 
-
 .wrapper {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
   }
-
-
-
 
 
 // for top navigation bar
@@ -104,13 +113,22 @@ button{
     text-transform: uppercase;
 }
 
+footer{
+    background: $black;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+
+    p{
+        color: $white-shade;
+    }
+}
+
 // ============COMMENT/EMAIL CONTACT BOX==============
 
 form{            
     display: flex;
     flex-direction: column;
-    width: 70%;
-    margin-left: 30px;
 
     .name-email{
         display: flex;
@@ -119,7 +137,7 @@ form{
 
     input{
         border: 0;
-        width: 44%;
+        width: 47%;
         padding: 15px;
         margin-bottom: 20px;
     }
@@ -138,23 +156,14 @@ form{
         height: 20vh;
         padding: 15px;
     }
-}
 
-// ============COMMENT/EMAIL CONTACT BOX==============
+    .name-email{
 
-
-
-
-footer{
-    background: $black;
-    text-align: center;
-    width: 100%;
-    padding: 5px 0;
-
-    p{
-        color: $white-shade;
     }
 }
+
+
+
 
 // ======================CONTACT.HTML==========================
 .contact-page{
@@ -164,15 +173,6 @@ footer{
 
     header{
         background-image: url('../assets/contact-image-1.jpg');
-        background-position: center center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-bottom: 100px;
-    }
-    
-    h1{
-        margin: -50px 0;
     }
 
     section{
@@ -200,8 +200,13 @@ footer{
             display: inline;
             list-style-type: none;
             margin: 0 20px 0 0;
-        }    
+        }       
     }   
+
+    .email-contact{
+        margin-left: 30px;
+        flex: 1;
+    }
 }
 
 
@@ -211,25 +216,16 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: $white-shade;
 
     header{
         background-image: url('../assets/blog-image-1.jpg');
-        background-position: center center;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-bottom: 100px;   
     }
 
-    h1{
-        margin: -50px 0;
-    }
-
-    aside .about, aside .recent, article, .comment{
+    aside > *, 
+    article, 
+    .comment{
         background: white;
-        padding: 30px;
+        padding: 25px;
     }
 
     aside div{
@@ -248,13 +244,11 @@ footer{
     }
 
     ul{
-        list-style: disc;
         list-style-position: inside;
 
         li{
             font-size: 20px;
             font-family: 'Roboto', sans-serif;
-            color: $black;
             line-height: 32px;
             letter-spacing: 0px;
         }
@@ -281,7 +275,6 @@ footer{
         border-bottom: 5px $orangey-yellow solid;
     }
     
-
     p:not(footer p, .comment p){
         margin-top: 15px;
     }
@@ -290,3 +283,35 @@ footer{
         margin-bottom: 60px;
     }
 }
+
+
+// =====================INDEX.HTML=======================
+
+.home-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    header{
+        background-image: none;
+        background-color: $orangey-yellow;
+        height: 70vh;
+
+        h1{
+            font-size: 150px;
+        }
+    }
+
+    .sophie-stylized-image{
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 1fr;
+        column-gap: 1fr;
+    }
+
+    img[src="assets/home-image-1.jpg"]{
+        box-shadow: 20px 20px white;
+    }
+
+}
+
