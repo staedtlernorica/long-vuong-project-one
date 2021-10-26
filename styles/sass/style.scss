@@ -25,7 +25,7 @@ body{
 
 header{
     background: yellow;
-    height: 40vh;
+    height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -40,7 +40,7 @@ nav{
 
 
 .wrapper {
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
   }
@@ -104,10 +104,52 @@ button{
     text-transform: uppercase;
 }
 
+// ============COMMENT/EMAIL CONTACT BOX==============
+
+form{            
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 30px;
+
+    .name-email{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    input{
+        border: 0;
+        width: 44%;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    input:nth-child(2){
+        margin-left: 20px;
+    }
+
+    textarea, button{
+        border: 0;
+        resize: none;
+        margin-bottom: 20px;
+    }
+
+    textarea{
+        height: 20vh;
+        padding: 15px;
+    }
+}
+
+// ============COMMENT/EMAIL CONTACT BOX==============
+
+
+
+
 footer{
     background: $black;
     text-align: center;
     width: 100%;
+    padding: 5px 0;
 
     p{
         color: $white-shade;
@@ -115,7 +157,7 @@ footer{
 }
 
 // ======================CONTACT.HTML==========================
-body.contact-page{
+.contact-page{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -127,10 +169,10 @@ body.contact-page{
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: 100px;
-
-        h1{
-            margin: -50px 0;
-        }
+    }
+    
+    h1{
+        margin: -50px 0;
     }
 
     section{
@@ -138,71 +180,34 @@ body.contact-page{
         justify-content: space-between;
     }
 
-    main{
-
-        aside{
-            background-color: white;
-            padding: 25px;
-            color: $orangey-yellow;
-            min-height: 230px;
-            min-width: 280px;
-            width: 25%;
-            height: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        
-        .social-icons {
-            justify-content: flex-start;
-
-            li{
-            margin: 0 20px 0 0;
-            }
-            
-        }   
-
-        form{            
-            display: flex;
-            flex-direction: column;
-            width: 70%;
-            margin-left: 30px;
-
-            .name-email{
-                display: flex;
-                justify-content: space-between;
-            }
-
-            input{
-                border: 0;
-                width: 44%;
-                padding: 15px;
-                margin-bottom: 20px;
-            }
-
-            input:nth-child(2){
-                margin-left: 20px;
-            }
-
-            textarea, button{
-                border: 0;
-                resize: none;
-                margin-bottom: 20px;
-            }
-
-            textarea{
-                height: 20vh;
-                padding: 15px;
-            }
-        }
+    aside{
+        background-color: white;
+        padding: 25px;
+        color: $orangey-yellow;
+        min-height: 230px;
+        min-width: 280px;
+        width: 25%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
+
+    .social-icons {
+        justify-content: flex-start;
+
+        li{
+            display: inline;
+            list-style-type: none;
+            margin: 0 20px 0 0;
+        }    
+    }   
 }
 
 
 // ====================BLOG.HTML============================
 
-body.blog-page{
+.blog-page{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -215,16 +220,25 @@ body.blog-page{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-bottom: 100px;
-       
-        h1{
-            margin: -50px 0;
-        }
+        margin-bottom: 100px;   
+    }
+
+    h1{
+        margin: -50px 0;
     }
 
     aside .about, aside .recent, article, .comment{
         background: white;
-        padding: 50px;
+        padding: 30px;
+    }
+
+    aside div{
+        margin-bottom: 30px;
+    }
+
+    h3{
+        font-size: 24px;
+        margin-bottom: 10px;
     }
 
     .grid-container{
@@ -234,10 +248,45 @@ body.blog-page{
     }
 
     ul{
-        list-style: circle;
-        // list
+        list-style: disc;
+        list-style-position: inside;
+
         li{
-            
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: $black;
+            line-height: 32px;
+            letter-spacing: 0px;
         }
+    }
+
+    article {
+        padding: 30px 40px;
+        border-bottom: 5px $orangey-yellow solid;
+    }
+
+    .other-comments{
+        margin: 40px 0;
+    }
+
+    .comment{
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        grid-template-rows: 1fr;
+        gap: 30px;
+    }
+
+    .comment:nth-child(2){
+        margin-top: 30px;
+        border-bottom: 5px $orangey-yellow solid;
+    }
+    
+
+    p:not(footer p, .comment p){
+        margin-top: 15px;
+    }
+
+    .add-comment{
+        margin-bottom: 60px;
     }
 }

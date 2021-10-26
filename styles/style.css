@@ -59,7 +59,7 @@ body {
 
 header {
   background: yellow;
-  height: 40vh;
+  height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -80,7 +80,7 @@ nav {
 }
 
 .wrapper {
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
@@ -144,16 +144,55 @@ button {
   text-transform: uppercase;
 }
 
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  margin-left: 30px;
+}
+form .name-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+form input {
+  border: 0;
+  width: 44%;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+form input:nth-child(2) {
+  margin-left: 20px;
+}
+form textarea, form button {
+  border: 0;
+  resize: none;
+  margin-bottom: 20px;
+}
+form textarea {
+  height: 20vh;
+  padding: 15px;
+}
+
 footer {
   background: #2c2c2c;
   text-align: center;
   width: 100%;
+  padding: 5px 0;
 }
 footer p {
   color: #f0efed;
 }
 
-body.contact-page {
+.contact-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,7 +204,7 @@ body.contact-page {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-body.contact-page header {
+.contact-page header {
   background-image: url("../assets/contact-image-1.jpg");
   background-position: center center;
   display: -webkit-box;
@@ -180,10 +219,10 @@ body.contact-page header {
           justify-content: space-between;
   margin-bottom: 100px;
 }
-body.contact-page header h1 {
+.contact-page h1 {
   margin: -50px 0;
 }
-body.contact-page section {
+.contact-page section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,7 +230,7 @@ body.contact-page section {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-body.contact-page main aside {
+.contact-page aside {
   background-color: white;
   padding: 25px;
   color: #f6a823;
@@ -210,53 +249,18 @@ body.contact-page main aside {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-body.contact-page main .social-icons {
+.contact-page .social-icons {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-body.contact-page main .social-icons li {
+.contact-page .social-icons li {
+  display: inline;
+  list-style-type: none;
   margin: 0 20px 0 0;
 }
-body.contact-page main form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 70%;
-  margin-left: 30px;
-}
-body.contact-page main form .name-email {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-body.contact-page main form input {
-  border: 0;
-  width: 44%;
-  padding: 15px;
-  margin-bottom: 20px;
-}
-body.contact-page main form input:nth-child(2) {
-  margin-left: 20px;
-}
-body.contact-page main form textarea, body.contact-page main form button {
-  border: 0;
-  resize: none;
-  margin-bottom: 20px;
-}
-body.contact-page main form textarea {
-  height: 20vh;
-  padding: 15px;
-}
 
-body.blog-page {
+.blog-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,7 +273,7 @@ body.blog-page {
           justify-content: space-between;
   background: #f0efed;
 }
-body.blog-page header {
+.blog-page header {
   background-image: url("../assets/blog-image-1.jpg");
   background-position: center center;
   background-size: cover;
@@ -285,20 +289,58 @@ body.blog-page header {
           justify-content: space-between;
   margin-bottom: 100px;
 }
-body.blog-page header h1 {
+.blog-page h1 {
   margin: -50px 0;
 }
-body.blog-page aside .about, body.blog-page aside .recent, body.blog-page article, body.blog-page .comment {
+.blog-page aside .about, .blog-page aside .recent, .blog-page article, .blog-page .comment {
   background: white;
-  padding: 50px;
+  padding: 30px;
 }
-body.blog-page .grid-container {
+.blog-page aside div {
+  margin-bottom: 30px;
+}
+.blog-page h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.blog-page .grid-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
   -webkit-column-gap: 25px;
      -moz-column-gap: 25px;
           column-gap: 25px;
 }
-body.blog-page ul {
-  list-style: circle;
+.blog-page ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+.blog-page ul li {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #2c2c2c;
+  line-height: 32px;
+  letter-spacing: 0px;
+}
+.blog-page article {
+  padding: 30px 40px;
+  border-bottom: 5px #f6a823 solid;
+}
+.blog-page .other-comments {
+  margin: 40px 0;
+}
+.blog-page .comment {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr;
+  gap: 30px;
+}
+.blog-page .comment:nth-child(2) {
+  margin-top: 30px;
+  border-bottom: 5px #f6a823 solid;
+}
+.blog-page p:not(footer p, .comment p) {
+  margin-top: 15px;
+}
+.blog-page .add-comment {
+  margin-bottom: 60px;
 }
