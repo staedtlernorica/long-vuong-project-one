@@ -144,7 +144,7 @@ nav {
 .navbar .hidden {
   font-family: "Lora", serif;
   color: #2c2c2c;
-  font-size: 32px;
+  font-size: 42px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -336,7 +336,16 @@ form textarea {
   margin-bottom: 60px;
 }
 
-.home-page {
+.home-page header {
+  background-image: none;
+  background-color: #f6a823;
+  height: 80vh;
+  margin-bottom: 50px;
+}
+.home-page h1 {
+  font-size: 150px;
+}
+.home-page header > .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -344,31 +353,40 @@ form textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
-.home-page header {
-  background-image: none;
-  background-color: #f6a823;
-  height: 80vh;
-}
-.home-page header h1 {
-  font-size: 150px;
-}
-.home-page .sophie-stylized-image {
+.home-page .sophie-stylized-header-container {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  grid-template-rows: 1fr;
-  -webkit-column-gap: 1fr;
-     -moz-column-gap: 1fr;
-          column-gap: 1fr;
-  margin: 50px 0;
+  grid-template-columns: 2fr 2fr -container20px;
+  grid-template-rows: 2fr 3fr;
+  margin-top: 50px;
+}
+.home-page .stylized-h1-container {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  position: relative;
+}
+.home-page .stylized-h1-container img {
+  position: absolute;
+  top: -100px;
+  left: -60px;
+}
+.home-page .stylized-hero-image {
+  grid-column-start: 5;
+  grid-row: 1/3;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
 }
 .home-page img[src="assets/home-image-1.jpg"] {
   -webkit-box-shadow: 20px 20px white;
           box-shadow: 20px 20px white;
-  max-width: none;
 }
 .home-page button {
   -ms-flex-item-align: start;
@@ -413,16 +431,12 @@ form textarea {
 }
 .home-page .pabc-container i {
   font-size: 30px;
-  grid-column-start: 1;
   background: #f6a823;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   padding-top: 20px;
   padding-left: 20px;
-}
-.home-page .pabc-container h3 {
-  grid-column-start: 2;
 }
 .home-page .pabc-container p {
   grid-column-start: 2;
