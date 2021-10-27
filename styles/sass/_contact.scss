@@ -1,0 +1,96 @@
+// ======================CONTACT.HTML==========================
+.contact-page{
+
+    // ====TURN OFF OR WILL MESS WITH HEADER HEIGHT
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+
+    header{
+        background-image: url('../assets/contact-image-1.jpg');
+    }
+
+    section{
+        // display: flex;
+        // justify-content: space-between;
+
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 25px;
+    }
+
+    aside{
+        background-color: white;
+        padding: 25px;
+        color: $orangey-yellow;
+        min-width: 220px;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+
+        li{
+            display: inline;
+            list-style-type: none;
+            margin: 0 20px 0 0;
+        }       
+    }   
+}
+
+
+
+@media(max-width:940px){
+    .contact-page p{
+        font-size: 18px;
+    }
+}
+
+@media(max-width:768px){
+    
+    .contact-page{
+    
+        .wrapper{
+            max-width: 95%;
+        }
+
+        p{
+            font-size: 16px;
+        }
+    }
+}
+
+
+
+
+@media(max-width:630px){
+
+    .contact-page{
+
+        h1{
+            margin: 0;
+            font-size: 70px;
+        }
+
+        header{
+            height: 30vh;
+            margin-bottom: 40px;
+        }
+
+        section{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+
+//     // SOPHIE top header goes left
+//     // hamburger nav
+//     // smaller h1
+//     // dont remove header image

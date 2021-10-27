@@ -1,0 +1,106 @@
+// ====================BLOG.HTML============================
+.blog-page{
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+
+    header{
+        background-image: url('../assets/blog-image-1.jpg');
+        background-position: 0 30px;
+    }
+
+    aside > *, 
+    article, 
+    .comment{
+        background: white;
+        padding: 30px;
+    }
+
+    aside div{
+        margin-bottom: 30px;
+
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        a{
+            color: $dark-grey-blue;
+            text-decoration: none;
+        }
+    }
+
+    .about > *{
+        padding: 10px 0;
+    }
+
+    h3{
+        font-size: 24px;
+    }
+
+    .main-aside-grid-container{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 25px;
+    }
+
+    ul{
+        list-style-position: inside;
+
+        li{
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            line-height: 32px;
+            letter-spacing: 0px;
+        }
+
+        span{
+            position: relative;
+            left: 15px;
+        }
+    }
+
+    article {
+        padding: 30px 40px;
+        border-bottom: 5px $orangey-yellow solid;
+    }
+
+    .other-comments{
+        margin: 40px 0;
+    }
+
+    .comment{
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        grid-template-rows: 1fr;
+        gap: 30px;
+    }
+
+    .comment:nth-child(2){
+        margin-top: 30px;
+        border-bottom: 5px $orangey-yellow solid;
+    }
+    
+    p:not(footer p, .comment p, .about p){
+        margin-top: 15px;
+    }
+
+    .add-comment{
+        margin-bottom: 60px;
+    }
+}
+
+@media(max-width:940px){
+    
+}
+
+@media(max-width:768px){
+
+}
+
+
+@media(max-width:480px){
+
+}
