@@ -1,24 +1,19 @@
 @import '_defaults';
 
 
-
-
-
-
-
-
 // reuse header portion
-
 // reuse message-submit/comment-post comment portion
-
-//reuse header
-
 // reuse button
 
 
 // =====================COMMON ELEMENTS================
 .capitalized{
     text-transform: uppercase;
+}
+
+// ensures images are never larger than parent element
+img {
+    max-width: 100%;
 }
 
 body{
@@ -104,7 +99,9 @@ button{
     padding: 5px 0;
     border: 0;
 
-    width: 100%;
+    // if buttons get weird paste cut this back into sophie journey button
+    padding: 10px 20px;
+
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -211,7 +208,6 @@ form{
 
 
 // ====================BLOG.HTML============================
-
 .blog-page{
     display: flex;
     flex-direction: column;
@@ -232,6 +228,7 @@ form{
         margin-bottom: 30px;
     }
 
+
     h3{
         font-size: 24px;
         margin-bottom: 10px;
@@ -239,7 +236,7 @@ form{
 
     .grid-container{
         display: grid;
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 1fr 2fr;
         column-gap: 25px;
     }
 
@@ -286,7 +283,6 @@ form{
 
 
 // =====================INDEX.HTML=======================
-
 .home-page{
     display: flex;
     flex-direction: column;
@@ -295,7 +291,7 @@ form{
     header{
         background-image: none;
         background-color: $orangey-yellow;
-        height: 70vh;
+        height: 80vh;
 
         h1{
             font-size: 150px;
@@ -307,11 +303,136 @@ form{
         grid-template-columns: 2fr 1fr 2fr;
         grid-template-rows: 1fr;
         column-gap: 1fr;
+        margin: 50px 0;
     }
 
     img[src="assets/home-image-1.jpg"]{
         box-shadow: 20px 20px white;
+
+        // counters the img{max-width: 100%} on line 25-27
+        max-width: none;
     }
 
+    // https://stackoverflow.com/a/33887124
+    // stop button from filling whole flex container
+    button{
+        align-self: flex-start;
+    }
+
+    .who-is{
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
+        row-gap: 20px;
+        padding: 30px 0;
+        justify-items: start;
+
+        h2{
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+
+        p{
+            grid-column-start: 1;
+            grid-row-start: 2;
+        }
+
+        button{
+            grid-column-start: 1;
+            grid-row-start: 3;
+        }
+    }
+
+
+
+
+    .photo-about-blog-contact-grid{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 2fr 2fr;
+        column-gap: 50px;
+        padding: 80px 0;
+    }
+
+    .pabc-container{
+        display: grid;
+        grid-template-columns: 1fr 8fr;
+        grid-template-rows: 1fr 3fr;
+        column-gap: 25px;
+
+        // method 1 to get circle behind icons
+        // https://markheath.net/post/font-awesome-circle-background
+        i{
+            font-size: 30px;
+            grid-column-start: 1;
+            background: $orangey-yellow;
+            border-radius: 50%;
+
+            // JANK
+            width: 50px;
+            height: 50px;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        h3{
+            grid-column-start: 2;
+        }
+
+        p{
+            grid-column-start: 2;
+            grid-row-start: 2;
+        }
+    }
+
+
+    img[src="assets/home-image-4.jpg"]{
+        width: 100%;
+    }
+
+
+    .sophie-journey{
+
+        padding: 100px 0;
+
+        img{
+            // width: calc(100%);
+            box-shadow: 20px 20px $orangey-yellow;
+        }
+
+        .wrapper{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr;
+            column-gap: 50px;
+        }
+
+
+        .sophie-journey-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    // ????????????? WORK AS EXPECTED W/ img{width:calc(100%);}
+    // ????????????? LEFT RIGHT SIDE NOT BALANCED
+    // ????????????? RIGHT SIDE BREAKING OUT OF WRAPPER
+    .travel-images{
+        padding: 100px 0;
+        background-color: white;
+        
+        .travel-images-container{
+            // margin: 100px 0 100px 0;         breaks grid
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            column-gap: 50px;
+        }
+            
+        img{
+            width: calc(100%);
+        }
+    }
 }
 

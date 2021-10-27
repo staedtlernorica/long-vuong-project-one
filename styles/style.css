@@ -52,6 +52,10 @@ p {
   text-transform: uppercase;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   background: #f0efed;
   height: 100vh;
@@ -151,7 +155,7 @@ button {
   color: #2c2c2c;
   padding: 5px 0;
   border: 0;
-  width: 100%;
+  padding: 10px 20px;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -294,7 +298,7 @@ form textarea {
 }
 .blog-page .grid-container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 2fr;
   -webkit-column-gap: 25px;
      -moz-column-gap: 25px;
           column-gap: 25px;
@@ -347,7 +351,7 @@ form textarea {
 .home-page header {
   background-image: none;
   background-color: #f6a823;
-  height: 70vh;
+  height: 80vh;
 }
 .home-page header h1 {
   font-size: 150px;
@@ -359,8 +363,113 @@ form textarea {
   -webkit-column-gap: 1fr;
      -moz-column-gap: 1fr;
           column-gap: 1fr;
+  margin: 50px 0;
 }
 .home-page img[src="assets/home-image-1.jpg"] {
   -webkit-box-shadow: 20px 20px white;
           box-shadow: 20px 20px white;
+  max-width: none;
+}
+.home-page button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.home-page .who-is {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  row-gap: 20px;
+  padding: 30px 0;
+  justify-items: start;
+}
+.home-page .who-is h2 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.home-page .who-is p {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.home-page .who-is button {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+.home-page .photo-about-blog-contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr 2fr;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+  padding: 80px 0;
+}
+.home-page .pabc-container {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: 1fr 3fr;
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+}
+.home-page .pabc-container i {
+  font-size: 30px;
+  grid-column-start: 1;
+  background: #f6a823;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.home-page .pabc-container h3 {
+  grid-column-start: 2;
+}
+.home-page .pabc-container p {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.home-page img[src="assets/home-image-4.jpg"] {
+  width: 100%;
+}
+.home-page .sophie-journey {
+  padding: 100px 0;
+}
+.home-page .sophie-journey img {
+  -webkit-box-shadow: 20px 20px #f6a823;
+          box-shadow: 20px 20px #f6a823;
+}
+.home-page .sophie-journey .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+}
+.home-page .sophie-journey .sophie-journey-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.home-page .travel-images {
+  padding: 100px 0;
+  background-color: white;
+}
+.home-page .travel-images .travel-images-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+}
+.home-page .travel-images img {
+  width: calc(100%);
 }
