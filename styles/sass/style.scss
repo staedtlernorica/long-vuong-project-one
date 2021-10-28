@@ -134,6 +134,8 @@ button{
 }
 
 footer{
+
+    margin-top: 60px;
     background: $black;
     text-align: center;
     width: 100%;
@@ -147,6 +149,7 @@ footer{
 
 // ============COMMENT/EMAIL CONTACT BOX==============
 form{
+    margin: 40px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 4fr 1fr;
