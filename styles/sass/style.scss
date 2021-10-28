@@ -20,12 +20,14 @@ img {
 
 body{
     background: $white-shade;
-    height:100vh;
+    //will break blog/contact header if header{height} is a %
+    // height:100vh;            
+    min-width: 436px;
 }
 
 header{
     background-color: red;
-    height: 45%;
+    height: 40vh;
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -82,7 +84,7 @@ nav{
         color: $white-shade;
     }
 
-    .hidden{
+    .sophie-logo{
         font-family: 'Lora', serif;
         color: $black;
         font-size: 42px;
@@ -90,6 +92,27 @@ nav{
         text-transform: uppercase;
         letter-spacing: 1px;
     }
+
+    .show-mobile{
+        display: none;
+    }
+}
+
+@media(max-width:650px){
+
+    .navbar{
+        justify-content: space-between;
+
+        li:not(.sophie-logo){
+            display: none;
+        }
+
+        li.show-mobile{
+            display: flex;
+            align-self: center;
+        }
+    }
+
 }
 
 

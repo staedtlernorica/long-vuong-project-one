@@ -18,7 +18,8 @@
 
     aside div{
         margin-bottom: 30px;
-
+        min-width: 220px;
+        max-width: 320px;
     }
 
     .about{
@@ -56,6 +57,7 @@
             letter-spacing: 0px;
         }
 
+        // give bullet custom spacing
         span{
             position: relative;
             left: 15px;
@@ -65,6 +67,7 @@
     article {
         padding: 30px 40px;
         border-bottom: 5px $orangey-yellow solid;
+        min-width: 600px;
     }
 
     .other-comments{
@@ -92,15 +95,31 @@
     }
 }
 
-@media(max-width:940px){
+@media(max-width:1150px){
+    .blog-page.wrapper{
+        max-width: 90%;
+    }
+}
+
+@media(max-width:700px){
+    .blog-page.wrapper{
+        max-width: 70%;
+    }
+}
+
+
+
+@media(max-width:780px){
     
-}
+    .blog-page{
+    
+        .wrapper{
+            max-width: 90%;
+        }
 
-@media(max-width:768px){
-
-}
-
-
-@media(max-width:480px){
-
+        p,
+        .recent li{
+            font-size: 16px;
+        }
+    }
 }

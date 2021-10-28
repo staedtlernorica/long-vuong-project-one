@@ -215,6 +215,8 @@ p {
 }
 .blog-page aside div {
   margin-bottom: 30px;
+  min-width: 220px;
+  max-width: 320px;
 }
 .blog-page .about {
   display: -webkit-box;
@@ -261,6 +263,7 @@ p {
 .blog-page article {
   padding: 30px 40px;
   border-bottom: 5px #f6a823 solid;
+  min-width: 600px;
 }
 .blog-page .other-comments {
   margin: 40px 0;
@@ -282,6 +285,25 @@ p {
   margin-bottom: 60px;
 }
 
+@media (max-width: 1150px) {
+  .blog-page.wrapper {
+    max-width: 90%;
+  }
+}
+@media (max-width: 700px) {
+  .blog-page.wrapper {
+    max-width: 70%;
+  }
+}
+@media (max-width: 780px) {
+  .blog-page .wrapper {
+    max-width: 90%;
+  }
+  .blog-page p,
+.blog-page .recent li {
+    font-size: 16px;
+  }
+}
 .contact-page header {
   background-image: url("../assets/contact-image-1.jpg");
 }
@@ -297,6 +319,7 @@ p {
   padding: 25px;
   color: #f6a823;
   min-width: 220px;
+  max-width: 400px;
   height: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -324,22 +347,25 @@ p {
   .contact-page p {
     font-size: 18px;
   }
+  .contact-page h1 {
+    font-size: 70px;
+  }
 }
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .contact-page .wrapper {
-    max-width: 95%;
+    max-width: 90%;
   }
   .contact-page p {
     font-size: 16px;
   }
 }
-@media (max-width: 630px) {
+@media (max-width: 650px) {
   .contact-page h1 {
     margin: 0;
-    font-size: 70px;
+    font-size: 60px;
+    text-align: center;
   }
   .contact-page header {
-    height: 30vh;
     margin-bottom: 40px;
   }
   .contact-page section {
@@ -350,9 +376,29 @@ p {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 40px;
+  }
+  .contact-page section aside {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: none;
+    min-width: none;
+  }
+  .contact-page section aside ul,
+.contact-page section aside h4 {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 512px) {
+  .contact-page h1 {
+    font-size: 50px;
   }
 }
 .capitalized {
@@ -370,12 +416,12 @@ img {
 
 body {
   background: #f0efed;
-  height: 100vh;
+  min-width: 436px;
 }
 
 header {
   background-color: red;
-  height: 45%;
+  height: 40vh;
   background-size: cover;
   background-position: center center;
   display: -webkit-box;
@@ -452,7 +498,7 @@ nav {
 .navbar .on-page {
   color: #f0efed;
 }
-.navbar .hidden {
+.navbar .sophie-logo {
   font-family: "Lora", serif;
   color: #2c2c2c;
   font-size: 42px;
@@ -460,7 +506,27 @@ nav {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.navbar .show-mobile {
+  display: none;
+}
 
+@media (max-width: 650px) {
+  .navbar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar li:not(.sophie-logo) {
+    display: none;
+  }
+  .navbar li.show-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+}
 button {
   background-color: #05afc1;
   color: #2c2c2c;

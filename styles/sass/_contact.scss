@@ -11,9 +11,6 @@
     }
 
     section{
-        // display: flex;
-        // justify-content: space-between;
-
         display: grid;
         grid-template-columns: 1fr 2fr;
         column-gap: 25px;
@@ -24,6 +21,7 @@
         padding: 25px;
         color: $orangey-yellow;
         min-width: 220px;
+        max-width: 400px;
         height: 40%;
         display: flex;
         flex-direction: column;
@@ -44,17 +42,24 @@
 
 
 @media(max-width:940px){
-    .contact-page p{
-        font-size: 18px;
+    .contact-page{
+
+        p{
+            font-size: 18px;
+        }
+            
+        h1{
+            font-size: 70px;
+        }
     }
 }
 
-@media(max-width:768px){
+@media(max-width:780px){
     
     .contact-page{
     
         .wrapper{
-            max-width: 95%;
+            max-width: 90%;
         }
 
         p{
@@ -66,28 +71,49 @@
 
 
 
-@media(max-width:630px){
+@media(max-width:650px){
 
     .contact-page{
 
         h1{
             margin: 0;
-            font-size: 70px;
+            font-size: 60px;
+            text-align: center;
         }
 
         header{
-            height: 30vh;
             margin-bottom: 40px;
         }
 
         section{
             display: flex;
             flex-direction: column-reverse;
-            justify-content: space-between;
+            justify-content: flex-start;
+            margin-bottom: 40px;
+            
+            aside{
+                align-items: center;
+                flex: 1;
+                max-width: none;
+                min-width: none;
+            
+                ul,
+                h4{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width:512px){
+    .contact-page{
+        h1{
+            font-size: 50px;
         }
     }
 }
-
 
 
 //     // SOPHIE top header goes left
