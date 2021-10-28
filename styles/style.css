@@ -288,6 +288,13 @@ p {
 }
 
 @media (max-width: 940px) {
+  .blog-page header {
+    margin-bottom: 40px;
+  }
+  .blog-page h1 {
+    margin: 0;
+    font-size: 70px;
+  }
   .blog-page .main-aside-grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -365,11 +372,15 @@ p {
 }
 
 @media (max-width: 940px) {
-  .contact-page p {
-    font-size: 18px;
+  .contact-page header {
+    margin-bottom: 40px;
   }
   .contact-page h1 {
+    margin: 0;
     font-size: 70px;
+  }
+  .contact-page p {
+    font-size: 18px;
   }
 }
 @media (max-width: 780px) {
@@ -382,7 +393,6 @@ p {
 }
 @media (max-width: 650px) {
   .contact-page h1 {
-    margin: 0;
     font-size: 60px;
     text-align: center;
   }
@@ -574,7 +584,6 @@ footer p {
 }
 
 form {
-  margin: 40px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 4fr 1fr;
