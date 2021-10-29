@@ -370,6 +370,17 @@ p {
   }
 }
 @media (max-width: 768px) {
+  .home-page .stylized-h1-container img {
+    top: -50px;
+    left: -40px;
+  }
+  .home-page h1 {
+    font-size: 120px;
+    margin: 0;
+  }
+  .home-page .stylized-hero-image {
+    display: none;
+  }
   .home-page .who-is {
     display: block;
   }
