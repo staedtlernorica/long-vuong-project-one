@@ -116,7 +116,6 @@
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr 1fr;
-            // grid-template-rows: 8fr 1fr 1fr;
         }
         
         article{
@@ -125,15 +124,16 @@
             grid-row-start: 1;
         }
 
-        aside{
-            grid-column-start: 1;
-            grid-row-start: 3;
-        }
-
         div.comments{
             grid-column-start: 1;
             grid-row-start: 2;
-            order: 1000;
+            height: fit-content;
+        }
+
+        aside{
+            grid-column-start: 1;
+            grid-row-start: 3;
+            height: fit-content;
         }
     }
 }
