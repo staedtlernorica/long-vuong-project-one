@@ -1,11 +1,5 @@
 // ======================CONTACT.HTML==========================
 .contact-page{
-
-    // ====TURN OFF OR WILL MESS WITH HEADER HEIGHT
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-
     header{
         background-image: url('../assets/contact-image-1.jpg');
     }
@@ -23,7 +17,6 @@
         color: $orangey-yellow;
         min-width: 220px;
         max-width: 400px;
-        // height: 40%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

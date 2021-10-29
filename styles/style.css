@@ -320,29 +320,31 @@ p {
   .home-page header {
     height: 40vh;
   }
-  .home-page section.full-bleed .full-bleed-rusty {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+  .home-page section.full-bleed {
+    display: block;
   }
-  .home-page section.full-bleed .full-bleed-rusty .image {
-    grid-column: 1;
-    grid-row: 1;
+  .home-page section.full-bleed .full-bleed-rusty,
+.home-page section.full-bleed .full-bleed-yellow {
+    display: block;
   }
-  .home-page section.full-bleed .full-bleed-rusty .text {
-    grid-column: 1;
-    grid-row: 2;
+  .home-page section.full-bleed .full-bleed-rusty div.text,
+.home-page section.full-bleed .full-bleed-yellow div.text {
+    text-align: left;
+    padding: 0;
   }
-  .home-page .full-bleed-yellow {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+  .home-page section.full-bleed .full-bleed-rusty button,
+.home-page section.full-bleed .full-bleed-yellow button {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
-  .home-page .full-bleed-yellow .image {
-    grid-column: 1;
-    grid-row: 1;
+  .home-page section.full-bleed .full-bleed-yellow {
+    margin-top: 30px;
   }
-  .home-page .full-bleed-yellow .text {
-    grid-column: 1;
-    grid-row: 2;
+  .home-page section.full-bleed .full-bleed-yellow .hide-desktop {
+    display: block;
+  }
+  .home-page .hide-mobile {
+    display: none;
   }
   .home-page .photo-about-blog-contact-grid {
     display: block;
@@ -370,15 +372,15 @@ p {
   }
 }
 @media (max-width: 768px) {
-  .home-page .stylized-h1-container img {
+  .home-page header .stylized-h1-container img {
     top: -50px;
     left: -40px;
   }
-  .home-page h1 {
+  .home-page header h1 {
     font-size: 120px;
     margin: 0;
   }
-  .home-page .stylized-hero-image {
+  .home-page header .stylized-hero-image {
     display: none;
   }
   .home-page .who-is,
@@ -394,7 +396,7 @@ p {
   }
 }
 @media (max-width: 480px) {
-  .home-page .pabc-container {
+  .home-page .photo-about-blog-contact-grid .pabc-container {
     display: block;
   }
   .home-page section.full-bleed div.wrapper {
@@ -402,15 +404,6 @@ p {
   }
   .home-page .text > * {
     margin-top: 20px;
-  }
-  .home-page .full-bleed-yellow {
-    margin-top: 30px;
-  }
-  .home-page .full-bleed-yellow .hide-desktop {
-    display: block;
-  }
-  .home-page .hide-mobile {
-    display: none;
   }
 }
 .blog-page header {
@@ -446,9 +439,6 @@ p {
 }
 .blog-page .about > * {
   padding: 10px 0;
-}
-.blog-page h3 {
-  font-size: 24px;
 }
 .blog-page .main-aside-grid-container {
   display: grid;
@@ -678,7 +668,6 @@ header {
 }
 header h1 {
   margin: -50px 0;
-  font-size: 80px;
 }
 
 nav {

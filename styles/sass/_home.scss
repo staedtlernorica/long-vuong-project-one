@@ -241,34 +241,34 @@
             height: 40vh;
         }
 
-        section.full-bleed .full-bleed-rusty {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
+        section.full-bleed {
+            display: block;
 
-            .image {
-                grid-column: 1;
-                grid-row: 1;
+            .full-bleed-rusty,
+            .full-bleed-yellow {
+                display: block;
+
+                div.text {
+                    text-align: left;
+                    padding: 0;
+                }
+
+                button {
+                    align-self: flex-start;
+                }
             }
 
-            .text {
-                grid-column: 1;
-                grid-row: 2;
+            .full-bleed-yellow {
+                margin-top: 30px;
+
+                .hide-desktop {
+                    display: block;
+                }
             }
         }
 
-        .full-bleed-yellow {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
-
-            .image {
-                grid-column: 1;
-                grid-row: 1;
-            }
-
-            .text {
-                grid-column: 1;
-                grid-row: 2;
-            }
+        .hide-mobile {
+            display: none;
         }
 
         .photo-about-blog-contact-grid {
@@ -301,18 +301,21 @@
 
 @media (max-width: 768px) {
     .home-page {
-        .stylized-h1-container img {
-            top: -50px;
-            left: -40px;
-        }
+        header{
 
-        h1 {
-            font-size: 120px;
-            margin: 0;
-        }
-
-        .stylized-hero-image {
-            display: none;
+            .stylized-h1-container img {
+                top: -50px;
+                left: -40px;
+            }
+            
+            h1 {
+                font-size: 120px;
+                margin: 0;
+            }
+            
+            .stylized-hero-image {
+                display: none;
+            }
         }
 
         .who-is,
@@ -333,7 +336,7 @@
 
 @media (max-width: 480px) {
     .home-page {
-        .pabc-container {
+        .photo-about-blog-contact-grid .pabc-container {
             display: block;
         }
 
@@ -343,18 +346,6 @@
 
         .text > * {
             margin-top: 20px;
-        }
-
-        .full-bleed-yellow {
-            margin-top: 30px;
-
-            .hide-desktop {
-                display: block;
-            }
-        }
-
-        .hide-mobile {
-            display: none;
         }
     }
 }
