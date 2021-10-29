@@ -44,7 +44,7 @@
     .main-aside-grid-container{
         display: grid;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 2fr 1fr;
+        // grid-template-rows: 2fr 1fr;
         column-gap: 25px;
     }
 
@@ -113,27 +113,18 @@
         }
 
         .main-aside-grid-container{
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         
         article{
             margin-bottom: 40px;
-            grid-column-start: 1;
-            grid-row-start: 1;
-        }
-
-        div.comments{
-            grid-column-start: 1;
-            grid-row-start: 2;
-            height: fit-content;
         }
 
         aside{
-            grid-column-start: 1;
-            grid-row-start: 3;
-            height: fit-content;
+            margin: auto;
+            order: 1000;
         }
     }
 }
