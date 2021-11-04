@@ -1,3 +1,5 @@
+alert('added dropdown menu. new assignment 2 material line ul.mobile-navbar in header section and .mobile-navbar styles line 49-56 in styles.scss')
+
 $('.show-mobile').on('click', (event)=>{
     event.preventDefault();
 
