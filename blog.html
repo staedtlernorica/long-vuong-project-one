@@ -16,20 +16,35 @@
 
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/1d5ad86397.js" crossorigin="anonymous"></script>
+
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'
+        integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
 </head>
 
 <body class="blog-page">
     <header>
-        <nav class="">
-            <ul class="navbar">
+        <div class="both-nav">
+            <nav class="">
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li class="sophie-logo">Sophie</li>
+                    <li><a href="blog.html" class="on-page">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="show-mobile"><a href=""><i class="fas fa-bars fa-2x"></i></a></li>
+                </ul>
+            </nav>
+
+            <ul class="mobile-navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="">About</a></li>
-                <li class="sophie-logo">Sophie</li>
                 <li><a href="blog.html" class="on-page">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li class="show-mobile"><a href=""><i class="fas fa-bars fa-2x"></i></a></li>
             </ul>
-        </nav>
+        </div>
+
+
+
         <div class="wrapper">
             <h1 class="capitalized">Blog</h1>
         </div>
@@ -165,6 +180,8 @@
     <footer>
         <p>Copyright C 2018 HackerYou</p>
     </footer>
+    <script src="scroll.js"></script>
+
 </body>
 
 </html>

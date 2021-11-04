@@ -1,14 +1,14 @@
-@import '_defaults';
-@import '_home';
-@import '_blog';
-@import '_contact';
+@import "_defaults";
+@import "_home";
+@import "_blog";
+@import "_contact";
 
 // =====================COMMON ELEMENTS================
-.capitalized{
+.capitalized {
     text-transform: uppercase;
 }
 
-.blue-accent{
+.blue-accent {
     color: $dark-grey-blue;
     font-weight: bold;
 }
@@ -18,12 +18,12 @@ img {
     max-width: 100%;
 }
 
-body{
-    background: $white-shade;   
+body {
+    background: $white-shade;
     min-width: 436px;
 }
 
-header{
+header {
     background-color: red;
     height: 40vh;
     background-size: cover;
@@ -31,14 +31,14 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 100px;   
+    margin-bottom: 100px;
 
-    h1{
+    h1 {
         margin: -50px 0;
     }
 }
 
-nav{
+nav {
     height: 65px;
     background-color: $orangey-yellow;
     display: flex;
@@ -46,20 +46,29 @@ nav{
     justify-content: center;
 }
 
+.mobile-navbar {
+    list-style: none;
+    display: none;
+    li {
+        text-align: right;
+        background-color: red;
+    }
+}
+
 .wrapper {
     max-width: 75%;
     width: 100%;
     margin: 0 auto;
-  }
+}
 
 // for top navigation bar
-.navbar{
+.navbar {
     list-style: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     display: flex;
     justify-content: center;
 
-    li{
+    li {
         display: inline;
         margin: 0 20px;
         display: flex;
@@ -67,7 +76,7 @@ nav{
         justify-content: center;
     }
 
-    a{
+    a {
         color: $black;
         font-size: 20px;
         font-weight: bold;
@@ -77,12 +86,12 @@ nav{
         letter-spacing: 1px;
     }
 
-    .on-page{
+    .on-page {
         color: $white-shade;
     }
 
-    .sophie-logo{
-        font-family: 'Lora', serif;
+    .sophie-logo {
+        font-family: "Lora", serif;
         color: $black;
         font-size: 42px;
         font-weight: bold;
@@ -90,37 +99,34 @@ nav{
         letter-spacing: 1px;
     }
 
-    .show-mobile{
+    .show-mobile {
         display: none;
     }
 }
 
-@media(max-width:650px){
-
-    .navbar{
+@media (max-width: 650px) {
+    .navbar {
         justify-content: space-between;
 
-        li:not(.sophie-logo){
+        li:not(.sophie-logo) {
             display: none;
         }
 
-        li.show-mobile{
+        li.show-mobile {
             display: flex;
             align-self: center;
         }
     }
-
 }
 
-
-button{
+button {
     background-color: $accent;
     color: $black;
     padding: 5px 0;
     border: 0;
     padding: 10px 20px;
 
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     font-weight: bold;
     line-height: 32px;
@@ -128,22 +134,20 @@ button{
     text-transform: uppercase;
 }
 
-footer{
+footer {
     margin-top: 60px;
     background: $black;
     text-align: center;
     width: 100%;
     padding: 5px 0;
 
-    p{
+    p {
         color: $white-shade;
     }
 }
 
-
 // ============COMMENT/EMAIL CONTACT BOX==============
-form{
-
+form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 4fr 1fr;
@@ -151,49 +155,46 @@ form{
     row-gap: 25px;
     margin-bottom: 60px;
 
-    textarea, 
+    textarea,
     button,
-    input{
+    input {
         border: 0;
         resize: none;
         padding: 15px;
     }
 
-    input:nth-child(1){
+    input:nth-child(1) {
         grid-column: 1;
         grid-row: 1;
     }
-    input:nth-child(2){
+    input:nth-child(2) {
         grid-column: 2/-1;
         grid-row: 1;
     }
 
-    textarea{
+    textarea {
         grid-column: 1/-1;
         grid-row: 2/-2;
     }
 
-    button{
+    button {
         grid-column: 1/-1;
         grid-row: 4;
     }
 }
 
-
-@media(max-width:768px){
-    
-    form{
-
-        input:nth-child(1){
+@media (max-width: 768px) {
+    form {
+        input:nth-child(1) {
             grid-column: 1/-1;
             grid-row: 1;
         }
-        input:nth-child(2){
+        input:nth-child(2) {
             grid-column: 1/-1;
             grid-row: 2;
         }
-    
-        textarea{
+
+        textarea {
             grid-column: 1/-1;
             grid-row: 3/-2;
         }

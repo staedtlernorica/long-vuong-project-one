@@ -685,6 +685,15 @@ nav {
           justify-content: center;
 }
 
+.mobile-navbar {
+  list-style: none;
+  display: none;
+}
+.mobile-navbar li {
+  text-align: right;
+  background-color: red;
+}
+
 .wrapper {
   max-width: 75%;
   width: 100%;
